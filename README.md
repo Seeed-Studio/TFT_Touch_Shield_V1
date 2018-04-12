@@ -1,6 +1,11 @@
 TFT Touch Shield V1.0
 ---------------------------------------------------------
 
+<img src=https://statics3.seeedstudio.com/images/product/2.8touch%20shieldv2.jpg width=400><img src=https://statics3.seeedstudio.com/product/2.8touch%20shieldv2_01.jpg width=400>
+
+[2.8 TFT Touch Shield V2.0](https://www.seeedstudio.com/s/2.8-TFT-Touch-Shield-V2.0-p-1286.html)
+
+
 2.8'' TFT Touch Shield is an Arduino UNO/ Mega compatible multicolored TFT display with a 4-wire resistive touch-screen. It is available in an Arduino shield compatible pinout for attachment. The TFT driver is based on ST7781R with 8bit data and 4bit control interface. 
  
 **Features:**
@@ -24,7 +29,7 @@ TFT Touch Shield V1.0
 
 This code include an easy example which can show you how to use this shield
 
-For more information, please refer to [wiki page](http://www.seeedstudio.com/wiki/2.8%27%27_TFT_Touch_Shield_V1.0).
+For more information, please refer to [wiki page](http://wiki.seeedstudio.com/2.8inch_TFT_Touch_Shield_v2.0/).
 
     
 ----

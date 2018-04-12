@@ -1,0 +1,41 @@
+  
+#######################################
+# Syntax Coloring Map For 
+#######################################
+
+#######################################
+# Datatypes (KEYWORD1)
+#######################################
+
+
+
+#######################################
+# Methods and Functions (KEYWORD2)
+#######################################
+init	KEYWORD2
+paintScreenBlack	KEYWORD2
+sendCommand	KEYWORD2
+sendData	KEYWORD2
+pushData	KEYWORD2
+getData	KEYWORD2
+readRegister	KEYWORD2
+setXY	KEYWORD2
+setPixel	KEYWORD2
+drawLine	KEYWORD2
+drawVerticalLine	KEYWORD2
+drawHorizontalLine	KEYWORD2
+drawRectangle	KEYWORD2
+fillRectangle	KEYWORD2
+drawCircle	KEYWORD2
+fillCircle	KEYWORD2
+drawChar	KEYWORD2
+drawString	KEYWORD2
+all_pin_input	KEYWORD2
+all_pin_output	KEYWORD2
+all_pin_low	KEYWORD2
+setOrientation	KEYWORD2
+setDisplayDirect	KEYWORD2
+
+#######################################
+# Constants (LITERAL1)
+#######################################
