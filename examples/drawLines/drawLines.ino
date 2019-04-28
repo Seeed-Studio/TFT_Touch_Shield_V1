@@ -14,7 +14,7 @@
 //  Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 #include <stdint.h>
 #include <TouchScreen.h> 
-#include <TFT.h>
+#include <TFT_Touch_Shield_V1.h>
 
 #ifdef SEEEDUINO
   #define YP A2   // must be an analog pin, use "An" notation!
