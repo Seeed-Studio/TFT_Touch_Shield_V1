@@ -1,7 +1,7 @@
 // Tft Touch Shield V1.0 demo - Display BMP file
 
 #include <SD.h>
-#include <TFT.h>
+#include <TFT_Touch_Shield_V1.h>
 
 // In the SD card, place 24 bit color BMP files (be sure they are 24-bit!)
 // the file itself

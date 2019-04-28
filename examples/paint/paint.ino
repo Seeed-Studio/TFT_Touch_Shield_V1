@@ -14,7 +14,7 @@
 //  Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 #include <stdint.h>
 #include <TouchScreen.h>
-#include <TFT.h>
+#include <TFT_Touch_Shield_V1.h>
 
 
 #if defined(__AVR_ATmega1280__) || defined(__AVR_ATmega2560__) // mega
