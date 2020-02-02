@@ -14,41 +14,39 @@
 //  Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 /*
     Modified record:
-    
+
 */
 #include <stdint.h>
-#include <TouchScreen.h> 
+#include <TouchScreen.h>
 #include <TFT_Touch_Shield_V1.h>
 
 #ifdef SEEEDUINO
-  #define YP A2   // must be an analog pin, use "An" notation!
-  #define XM A1   // must be an analog pin, use "An" notation!
-  #define YM 14   // can be a digital pin, this is A0
-  #define XP 17   // can be a digital pin, this is A3 
+    #define YP A2   // must be an analog pin, use "An" notation!
+    #define XM A1   // must be an analog pin, use "An" notation!
+    #define YM 14   // can be a digital pin, this is A0
+    #define XP 17   // can be a digital pin, this is A3
 #endif
 
 #ifdef MEGA
-  #define YP A2   // must be an analog pin, use "An" notation!
-  #define XM A1   // must be an analog pin, use "An" notation!
-  #define YM 54   // can be a digital pin, this is A0
-  #define XP 57   // can be a digital pin, this is A3 
-#endif 
-void setup()
-{
+    #define YP A2   // must be an analog pin, use "An" notation!
+    #define XM A1   // must be an analog pin, use "An" notation!
+    #define YM 54   // can be a digital pin, this is A0
+    #define XP 57   // can be a digital pin, this is A3
+#endif
+void setup() {
 
-  Tft.init();  //init TFT library
-  Tft.setDisplayDirect(LEFT2RIGHT);
-  Tft.drawString("UP",20,20,4,WHITE);
-  Tft.setDisplayDirect(RIGHT2LEFT);
-  Tft.drawString("DOWN",220,220,4,WHITE);
-  Tft.setDisplayDirect(DOWN2UP);
-  Tft.drawString("LEFT",20,220,4,WHITE);
-  Tft.setDisplayDirect(UP2DOWN);
-  Tft.drawString("RIGHT",220,20,4,WHITE);
+    Tft.init();  //init TFT library
+    Tft.setDisplayDirect(LEFT2RIGHT);
+    Tft.drawString("UP", 20, 20, 4, WHITE);
+    Tft.setDisplayDirect(RIGHT2LEFT);
+    Tft.drawString("DOWN", 220, 220, 4, WHITE);
+    Tft.setDisplayDirect(DOWN2UP);
+    Tft.drawString("LEFT", 20, 220, 4, WHITE);
+    Tft.setDisplayDirect(UP2DOWN);
+    Tft.drawString("RIGHT", 220, 20, 4, WHITE);
 }
 
-void loop()
-{
-  
+void loop() {
+
 
 }

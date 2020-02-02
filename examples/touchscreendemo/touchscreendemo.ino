@@ -12,21 +12,21 @@
 //  License along with this library; if not, write to the Free Software
 //  Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 #include <stdint.h>
-#include <TouchScreen.h> 
+#include <TouchScreen.h>
 #include <TFT_Touch_Shield_V1.h>
 #ifdef SEEEDUINO
-  #define YP A2   // must be an analog pin, use "An" notation!
-  #define XM A1   // must be an analog pin, use "An" notation!
-  #define YM 14   // can be a digital pin, this is A0
-  #define XP 17   // can be a digital pin, this is A3 
+    #define YP A2   // must be an analog pin, use "An" notation!
+    #define XM A1   // must be an analog pin, use "An" notation!
+    #define YM 14   // can be a digital pin, this is A0
+    #define XP 17   // can be a digital pin, this is A3
 #endif
 
 #ifdef MEGA
-  #define YP A2   // must be an analog pin, use "An" notation!
-  #define XM A1   // must be an analog pin, use "An" notation!
-  #define YM 54   // can be a digital pin, this is A0
-  #define XP 57   // can be a digital pin, this is A3 
-#endif 
+    #define YP A2   // must be an analog pin, use "An" notation!
+    #define XM A1   // must be an analog pin, use "An" notation!
+    #define YM 54   // can be a digital pin, this is A0
+    #define XP 57   // can be a digital pin, this is A3
+#endif
 
 //Measured ADC values for (0,0) and (210-1,320-1)
 //TS_MINX corresponds to ADC value when X = 0
@@ -47,30 +47,30 @@
 TouchScreen ts = TouchScreen(XP, YP, XM, YM, 300);
 
 void setup(void) {
-  Serial.begin(9600);
+    Serial.begin(9600);
 }
 
 void loop(void) {
-  // a point object holds x y and z coordinates
-  Point p = ts.getPoint();
+    // a point object holds x y and z coordinates
+    Point p = ts.getPoint();
 
-  if (p.z > ts.pressureThreshhold) {
-     Serial.print("Raw X = "); Serial.print(p.x);
-     Serial.print("\tRaw Y = "); Serial.print(p.y);
-     Serial.print("\tPressure = "); Serial.println(p.z);
-  }
-  
- 
-  p.x = map(p.x, TS_MINX, TS_MAXX, 240, 0);
-  p.y = map(p.y, TS_MINY, TS_MAXY, 320, 0);
-  
-  // we have some minimum pressure we consider 'valid'
-  // pressure of 0 means no pressing!
-  if (p.z > ts.pressureThreshhold) {
-     Serial.print("X = "); Serial.print(p.x);
-     Serial.print("\tY = "); Serial.print(p.y);
-     Serial.print("\tPressure = "); Serial.println(p.z);
-  }
+    if (p.z > ts.pressureThreshhold) {
+        Serial.print("Raw X = "); Serial.print(p.x);
+        Serial.print("\tRaw Y = "); Serial.print(p.y);
+        Serial.print("\tPressure = "); Serial.println(p.z);
+    }
 
-  delay(100);
+
+    p.x = map(p.x, TS_MINX, TS_MAXX, 240, 0);
+    p.y = map(p.y, TS_MINY, TS_MAXY, 320, 0);
+
+    // we have some minimum pressure we consider 'valid'
+    // pressure of 0 means no pressing!
+    if (p.z > ts.pressureThreshhold) {
+        Serial.print("X = "); Serial.print(p.x);
+        Serial.print("\tY = "); Serial.print(p.y);
+        Serial.print("\tPressure = "); Serial.println(p.z);
+    }
+
+    delay(100);
 }

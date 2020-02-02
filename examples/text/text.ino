@@ -14,35 +14,33 @@
 //  Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 
 #include <stdint.h>
-#include <TouchScreen.h> 
+#include <TouchScreen.h>
 #include <TFT_Touch_Shield_V1.h>
 
 #ifdef SEEEDUINO
-  #define YP A2   // must be an analog pin, use "An" notation!
-  #define XM A1   // must be an analog pin, use "An" notation!
-  #define YM 14   // can be a digital pin, this is A0
-  #define XP 17   // can be a digital pin, this is A3 
+    #define YP A2   // must be an analog pin, use "An" notation!
+    #define XM A1   // must be an analog pin, use "An" notation!
+    #define YM 14   // can be a digital pin, this is A0
+    #define XP 17   // can be a digital pin, this is A3
 #endif
 
 #ifdef MEGA
-  #define YP A2   // must be an analog pin, use "An" notation!
-  #define XM A1   // must be an analog pin, use "An" notation!
-  #define YM 54   // can be a digital pin, this is A0
-  #define XP 57   // can be a digital pin, this is A3 
-#endif 
+    #define YP A2   // must be an analog pin, use "An" notation!
+    #define XM A1   // must be an analog pin, use "An" notation!
+    #define YM 54   // can be a digital pin, this is A0
+    #define XP 57   // can be a digital pin, this is A3
+#endif
 
-void setup()
-{
+void setup() {
 
-Tft.init();  //init TFT library
+    Tft.init();  //init TFT library
 
-  Tft.drawString("Happy!",0,160,1,CYAN);
-  Tft.drawString("Happy!",0,200,2,WHITE);
-  Tft.drawString("Happy!",0,240,4,WHITE);
+    Tft.drawString("Happy!", 0, 160, 1, CYAN);
+    Tft.drawString("Happy!", 0, 200, 2, WHITE);
+    Tft.drawString("Happy!", 0, 240, 4, WHITE);
 }
 
-void loop()
-{
-  
+void loop() {
+
 
 }

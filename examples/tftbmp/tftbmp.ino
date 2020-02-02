@@ -11,8 +11,7 @@ File bmpFile;
 int bmpWidth, bmpHeight;
 uint8_t bmpDepth, bmpImageoffset;
 
-void setup()
-{
+void setup() {
     Serial.begin(9600);
 
     Tft.init();
@@ -28,8 +27,7 @@ void setup()
 
 }
 
-void loop()
-{
+void loop() {
     Tft.setOrientation(0);
 
     //Image 1
@@ -91,18 +89,18 @@ void bmpdraw(File f, int x, int y) {
     int i, j;
 
     uint8_t sdbuffer[3 * BUFFPIXEL];  // 3 * pixels to buffer
-    uint8_t buffidx = 3*BUFFPIXEL;
+    uint8_t buffidx = 3 * BUFFPIXEL;
 
 
-    for (i=0; i< bmpHeight; i++) {
+    for (i = 0; i < bmpHeight; i++) {
 
-        Tft.setXY(x, y+bmpHeight-i);
+        Tft.setXY(x, y + bmpHeight - i);
 
 
-        for (j=0; j<bmpWidth; j++) {
+        for (j = 0; j < bmpWidth; j++) {
             // read more pixels
-            if (buffidx >= 3*BUFFPIXEL) {
-                bmpFile.read(sdbuffer, 3*BUFFPIXEL);
+            if (buffidx >= 3 * BUFFPIXEL) {
+                bmpFile.read(sdbuffer, 3 * BUFFPIXEL);
                 buffidx = 0;
             }
 
@@ -155,8 +153,9 @@ boolean bmpReadHeader(File f) {
     bmpHeight = read32(f);
 
 
-    if (read16(f) != 1)
-    return false;
+    if (read16(f) != 1) {
+        return false;
+    }
 
     bmpDepth = read16(f);
     Serial.print("bitdepth "); Serial.println(bmpDepth, DEC);
