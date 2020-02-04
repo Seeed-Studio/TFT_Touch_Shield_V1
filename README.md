@@ -1,4 +1,4 @@
-TFT Touch Shield V1.0
+TFT Touch Shield V1.0  [![Build Status](https://travis-ci.com/Seeed-Studio/TFT_Touch_Shield_V1.svg?branch=master)](https://travis-ci.com/Seeed-Studio/TFT_Touch_Shield_V1)
 ---------------------------------------------------------
 
 <img src=https://statics3.seeedstudio.com/images/product/2.8touch%20shieldv2.jpg width=400><img src=https://statics3.seeedstudio.com/product/2.8touch%20shieldv2_01.jpg width=400>
